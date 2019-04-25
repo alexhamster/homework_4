@@ -74,10 +74,7 @@ namespace myFunc {
 }
 
 template<typename T, bool is_integral, bool is_object, bool is_tuple>
-struct print // default case
-{
-
-};
+struct print {}; // default case
 
 template <typename T>
 union byteview
@@ -89,7 +86,7 @@ union byteview
 template<typename T>
 struct print<T, true, false, false> // integral types
 {
-    std::string operator()(T t)
+    std::string operator()(const T& t)
     {
         byteview<T> bi;
         bi.i = t;
@@ -109,7 +106,7 @@ struct print<T, true, false, false> // integral types
 template<typename T>
 struct print<T,false, true, false> // object types
 {
-    std::string operator()(T t)
+    std::string operator()(const T& t)
     {
         std::string out_str = "";
 
@@ -132,7 +129,7 @@ struct print<T, false, true, true> // valid tuple types
             typename std::tuple_element<0,T>::type,
             typename std::tuple_element<std::tuple_size<T>()-1,T>::type,
             std::tuple_size<T>() - 1,
-                    T>::value, std::string> operator()(T t)
+                    T>::value, std::string> operator()(const T& t)
     {
         myFunc::tuple_print(t);
         return "";
@@ -140,7 +137,7 @@ struct print<T, false, true, true> // valid tuple types
 };
 
 template <typename T>
-std::string do_print(T t)
+std::string do_print(const T& t)
 {
     static const bool is_integral = std::is_integral<T>::value;
     static const bool is_compound = std::is_compound<T>::value;
