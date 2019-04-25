@@ -8,7 +8,7 @@ int main()
     do_print<char>(char(-1));
     do_print<short>(short(0));
     do_print<int>(int(2130706433));
-    do_print<long>(8875824491850138409);
+    do_print<long>(long(8875824491850138409));
 
     std::vector<int> v1 = {1,2,3,4,5};
     do_print<std::vector<int>>(v1);
