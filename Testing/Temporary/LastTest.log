@@ -1,10 +1,10 @@
-Start testing: Apr 25 15:18 UTC
+Start testing: Apr 25 15:44 UTC
 ----------------------------------------------------------
 1/1 Testing: ipt
 1/1 Test: ipt
 Command: "/home/travis/build/alexhamster/homework_4/test_ip_print"
 Directory: /home/travis/build/alexhamster/homework_4
-"ipt" start time: Apr 25 15:18 UTC
+"ipt" start time: Apr 25 15:44 UTC
 Output:
 ----------------------------------------------------------
 Running 4 test cases...
@@ -18,8 +18,8 @@ Hello, World!
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"ipt" end time: Apr 25 15:18 UTC
+"ipt" end time: Apr 25 15:44 UTC
 "ipt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Apr 25 15:18 UTC
+End testing: Apr 25 15:44 UTC
