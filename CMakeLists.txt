@@ -4,16 +4,16 @@
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
-add_executable(ip_print main.cpp)
+add_executable(print_ip main.cpp)
 
 add_library(ip_lib ip_print.cpp)
 
 add_executable(test_ip_print test_ip_print.cpp)
 
-set_target_properties(ip_print ip_lib test_ip_print PROPERTIES
+set_target_properties(print_ip ip_lib test_ip_print PROPERTIES
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
-        #COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
+        COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
         )
 
 set_target_properties(test_ip_print PROPERTIES
@@ -21,7 +21,7 @@ set_target_properties(test_ip_print PROPERTIES
         INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
         )
 
-target_link_libraries(ip_print
+target_link_libraries(print_ip
         ip_lib
         )
 
@@ -31,7 +31,7 @@ target_link_libraries(test_ip_print
         )
 
 
-install(TARGETS ip_print RUNTIME DESTINATION bin)
+install(TARGETS print_ip RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
