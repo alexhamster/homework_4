@@ -1,0 +1,15 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="false_type",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="myFunc::is_one_of\<\l std::tuple_element\l\< 0, V \>::type, std::\ltuple_element\< S, V \>\l::type, S-1, V \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmyFunc_1_1is__one__of.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="myFunc::is_one_of\<\l T, T, S, V \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmyFunc_1_1is__one__of_3_01T_00_01T_00_01S_00_01V_01_4.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="myFunc::is_one_of\<\l T, U, S, V \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmyFunc_1_1is__one__of.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="myFunc::IsTupleImpl\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmyFunc_1_1IsTupleImpl.html"];
+}

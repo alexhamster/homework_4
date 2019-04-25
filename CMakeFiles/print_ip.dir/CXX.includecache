@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/alexhamster/homework_4/main.cpp
+vector
+-
+list
+-
+print_ip.cpp
+/home/travis/build/alexhamster/homework_4/print_ip.cpp
+
+/home/travis/build/alexhamster/homework_4/print_ip.cpp
+iostream
+-
+type_traits
+-
+tuple
+-
+string
+-
+
