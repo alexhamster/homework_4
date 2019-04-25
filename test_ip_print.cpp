@@ -1,6 +1,6 @@
 #define BOOST_TEST_MODULE test_module
 #include <boost/test/unit_test.hpp>
-#include "ip_print.cpp"
+#include "print_ip.cpp"
 
 BOOST_AUTO_TEST_SUITE(print_test_suite)
 

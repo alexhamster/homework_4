@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(ip_filter VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+project(print_ip VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 add_executable(print_ip main.cpp)
 
-add_library(ip_lib ip_print.cpp)
+add_library(ip_lib print_ip.cpp)
 
 add_executable(test_ip_print test_ip_print.cpp)
 
