@@ -5,16 +5,22 @@ before_script:
   - sudo apt update
   - sudo apt install libboost-test-dev -y
   - sudo apt install doxygen
-
+addons:
+  apt:
+    packages:
+      - doxygen
 script:
   - cmake .
   - cmake --build .
   - cmake --build . --target test
   - cmake --build . --target package
   - doxygen Doxyfile
+
 deploy:
   provider: pages
   skip_cleanup: true
+  local_dir: docs/html
   github_token: $GITHUB_TOKEN
+  keep_history: true
   on:
     branch: master
