@@ -1,0 +1,72 @@
+\hypertarget{structprint_3_01T_00_01false_00_01true_00_01true_01_4}{}\section{print$<$ T, false, true, true $>$ Struct Template Reference}
+\label{structprint_3_01T_00_01false_00_01true_00_01true_01_4}\index{print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}}
+
+
+Collaboration diagram for print$<$ T, false, true, true $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{structprint_3_01T_00_01false_00_01true_00_01true_01_4__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a2dae0d9d3db0a28ae73051bef2394aaa}{first\+\_\+element\+\_\+type} = typename std\+::tuple\+\_\+element\+\_\+t$<$ 0, T $>$
+\item 
+using \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a7409ff0e8e3242c751eaec334842ae4a}{last\+\_\+element\+\_\+type} = typename std\+::tuple\+\_\+element\+\_\+t$<$ std\+::tuple\+\_\+size$<$ T $>$()-\/1, T $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::enable\+\_\+if\+\_\+t$<$ \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_ac26cb1e1f2d4e622fc9bd7ba97555dc4}{is\+\_\+valid\+\_\+tuple}, std\+::string $>$ \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a6be8db822c3eb9a125d9f45eef7853a9}{operator()} (const T \&t)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a9e916cb79c7ac38e78590d3c30b633e7}{tuple\+\_\+size} = std\+::tuple\+\_\+size$<$T$>$() -\/ 1
+\item 
+static constexpr bool \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_ac26cb1e1f2d4e622fc9bd7ba97555dc4}{is\+\_\+valid\+\_\+tuple}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}!first\+\_\+element\+\_\+type@{first\+\_\+element\+\_\+type}}
+\index{first\+\_\+element\+\_\+type@{first\+\_\+element\+\_\+type}!print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}}
+\subsubsection[{\texorpdfstring{first\+\_\+element\+\_\+type}{first_element_type}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf print}$<$ T, false, true, true $>$\+::{\bf first\+\_\+element\+\_\+type} =  typename std\+::tuple\+\_\+element\+\_\+t$<$0,T$>$}\hypertarget{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a2dae0d9d3db0a28ae73051bef2394aaa}{}\label{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a2dae0d9d3db0a28ae73051bef2394aaa}
+\index{print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}!last\+\_\+element\+\_\+type@{last\+\_\+element\+\_\+type}}
+\index{last\+\_\+element\+\_\+type@{last\+\_\+element\+\_\+type}!print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}}
+\subsubsection[{\texorpdfstring{last\+\_\+element\+\_\+type}{last_element_type}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf print}$<$ T, false, true, true $>$\+::{\bf last\+\_\+element\+\_\+type} =  typename std\+::tuple\+\_\+element\+\_\+t$<$std\+::tuple\+\_\+size$<$T$>$()-\/1,T$>$}\hypertarget{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a7409ff0e8e3242c751eaec334842ae4a}{}\label{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a7409ff0e8e3242c751eaec334842ae4a}
+
+
+\subsection{Member Function Documentation}
+\index{print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}}
+\subsubsection[{\texorpdfstring{operator()(const T \&t)}{operator()(const T &t)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::enable\+\_\+if\+\_\+t$<${\bf is\+\_\+valid\+\_\+tuple}, std\+::string$>$ {\bf print}$<$ T, false, true, true $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a6be8db822c3eb9a125d9f45eef7853a9}{}\label{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a6be8db822c3eb9a125d9f45eef7853a9}
+
+
+\subsection{Member Data Documentation}
+\index{print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}!is\+\_\+valid\+\_\+tuple@{is\+\_\+valid\+\_\+tuple}}
+\index{is\+\_\+valid\+\_\+tuple@{is\+\_\+valid\+\_\+tuple}!print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}}
+\subsubsection[{\texorpdfstring{is\+\_\+valid\+\_\+tuple}{is_valid_tuple}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ constexpr bool {\bf print}$<$ T, false, true, true $>$\+::is\+\_\+valid\+\_\+tuple\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structprint_3_01T_00_01false_00_01true_00_01true_01_4_ac26cb1e1f2d4e622fc9bd7ba97555dc4}{}\label{structprint_3_01T_00_01false_00_01true_00_01true_01_4_ac26cb1e1f2d4e622fc9bd7ba97555dc4}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \hyperlink{namespacemyFunc_aa757a804546f113b7cadf75b0a1ec7e1}{myFunc::is\_one\_of\_v}<
+            \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a2dae0d9d3db0a28ae73051bef2394aaa}{first\_element\_type},
+            \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a7409ff0e8e3242c751eaec334842ae4a}{last\_element\_type},
+            \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a9e916cb79c7ac38e78590d3c30b633e7}{tuple\_size},
+            T>
+\end{DoxyCode}
+\index{print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}!tuple\+\_\+size@{tuple\+\_\+size}}
+\index{tuple\+\_\+size@{tuple\+\_\+size}!print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}}
+\subsubsection[{\texorpdfstring{tuple\+\_\+size}{tuple_size}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ constexpr size\+\_\+t {\bf print}$<$ T, false, true, true $>$\+::tuple\+\_\+size = std\+::tuple\+\_\+size$<$T$>$() -\/ 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a9e916cb79c7ac38e78590d3c30b633e7}{}\label{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a9e916cb79c7ac38e78590d3c30b633e7}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{print__ip_8cpp}{print\+\_\+ip.\+cpp}\end{DoxyCompactItemize}
