@@ -4,7 +4,7 @@ compiler: clang
 before_script:
   - sudo apt update
   - sudo apt install libboost-test-dev -y
-  - sudo apt install doxygen
+  - sudo apt install doxygen -y
   - sudo apt-get install graphviz graphviz-doc -y
 addons:
   apt:
@@ -25,5 +25,4 @@ deploy:
     branch: master
   provider: script
   script:
-    skip_cleanup: true
     - curl -T print_ip-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ualexhamster:$BINTRAY_API_KEY "https://api.bintray.com/content/alexhamster/OTUS-Cpp/homework/$TRAVIS_BUILD_NUMBER/print_ip-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1"
