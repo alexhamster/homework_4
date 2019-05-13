@@ -1,2 +1,4 @@
-HAVE_DOT = YES
-EXTRACT_ALL = YES
+EXTRACT_ALL            = YES
+HAVE_DOT               = YES
+CLASS_DIAGRAMS         = YES
+UML_LOOK               = YES
