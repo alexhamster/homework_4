@@ -7,7 +7,7 @@ BOOST_AUTO_TEST_SUITE(print_test_suite)
 BOOST_AUTO_TEST_CASE(print_test_0)
 {
 
-    auto s1 = do_print<long>(long(8875824491850138409));
+    auto s1 = do_print(long(8875824491850138409));
     BOOST_CHECK(s1.compare("123.45.67.89.101.112.131.41") == 0);
 }
 

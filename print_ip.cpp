@@ -3,6 +3,16 @@
 #include <tuple>
 #include <string>
 
+namespace std {
+
+    template<typename T >
+    constexpr bool is_integral_v = is_integral<T>::value;
+
+    template<typename T >
+    constexpr bool is_compound_v = is_compound<T>::value;
+}
+
+
 namespace myFunc {
 
     // Using to check if the type is tuple or not
@@ -15,7 +25,7 @@ namespace myFunc {
     };
 
     template<typename T>
-    constexpr bool is_tuple() {
+    constexpr bool is_tuple_v() {
         return IsTupleImpl<std::decay_t<T>>::value;
     }
 
@@ -29,12 +39,16 @@ namespace myFunc {
     struct is_one_of<T,T,1,V> : std::true_type {};
 
     template <typename T, size_t S, typename V>
-    struct is_one_of<T,T,S,V> : is_one_of<typename std::tuple_element<0,V>::type,
-            typename std::tuple_element<S,V>::type, S-1, V> {};
+    struct is_one_of<T,T,S,V> : is_one_of<typename std::tuple_element_t <0,V>,
+            typename std::tuple_element_t<S,V>, S-1, V> {};
+
+    template <typename T, typename U, size_t S, typename V>
+    constexpr bool is_one_of_v = is_one_of<T,U,S,V>::value;
 
 
     // Here i am trying to (write a bicycle) find out if the type is a std::string or not,
     // because std::to_string() can't work with std::string
+    //std::enable_if_t<std::is_compound_v<T>, std::string> all_to_sting (T t) todo find out why it does't work
     template <typename T>
     std::enable_if_t<std::is_compound<T>::value, std::string> all_to_sting (T t)
     {
@@ -42,7 +56,7 @@ namespace myFunc {
     }
 
     template <typename T>
-    std::enable_if_t<std::is_integral<T>::value, std::string> all_to_sting (T t)
+    std::enable_if_t<std::is_integral_v<T>, std::string> all_to_sting (T t)
     {
         return std::to_string(t);
     }
@@ -74,10 +88,7 @@ namespace myFunc {
 }
 
 template<typename T, bool is_integral, bool is_object, bool is_tuple>
-struct print // default case
-{
-
-};
+struct print {}; // default case
 
 template <typename T>
 union byteview
@@ -89,7 +100,7 @@ union byteview
 template<typename T>
 struct print<T, true, false, false> // integral types
 {
-    std::string operator()(T t)
+    std::string operator()(const T& t)
     {
         byteview<T> bi;
         bi.i = t;
@@ -109,7 +120,7 @@ struct print<T, true, false, false> // integral types
 template<typename T>
 struct print<T,false, true, false> // object types
 {
-    std::string operator()(T t)
+    std::string operator()(const T& t)
     {
         std::string out_str = "";
 
@@ -128,11 +139,17 @@ struct print<T,false, true, false> // object types
 template<typename T>
 struct print<T, false, true, true> // valid tuple types
 {
-    std::enable_if_t <myFunc::is_one_of<
-            typename std::tuple_element<0,T>::type,
-            typename std::tuple_element<std::tuple_size<T>()-1,T>::type,
-            std::tuple_size<T>() - 1,
-                    T>::value, std::string> operator()(T t)
+    using first_element_type = typename std::tuple_element_t<0,T>;
+    using last_element_type = typename std::tuple_element_t<std::tuple_size<T>()-1,T>;
+    constexpr static size_t tuple_size = std::tuple_size<T>() - 1;
+
+    constexpr static bool is_valid_tuple = myFunc::is_one_of_v<
+            first_element_type,
+            last_element_type,
+            tuple_size,
+            T>;
+
+    std::enable_if_t <is_valid_tuple, std::string> operator()(const T& t)
     {
         myFunc::tuple_print(t);
         return "";
@@ -140,10 +157,10 @@ struct print<T, false, true, true> // valid tuple types
 };
 
 template <typename T>
-std::string do_print(T t)
+std::string do_print(const T& t)
 {
-    static const bool is_integral = std::is_integral<T>::value;
-    static const bool is_compound = std::is_compound<T>::value;
-    static const bool is_tuple = myFunc::is_tuple<T>();
+    static const bool is_integral = std::is_integral_v<T>;
+    static const bool is_compound = std::is_compound_v<T>;
+    static const bool is_tuple = myFunc::is_tuple_v<T>();
     return print<T, is_integral, is_compound, is_tuple>{}(t);
 }
