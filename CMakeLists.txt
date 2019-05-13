@@ -11,7 +11,7 @@ add_library(ip_lib print_ip.cpp)
 add_executable(test_ip_print test_ip_print.cpp)
 
 set_target_properties(print_ip ip_lib test_ip_print PROPERTIES
-        CXX_STANDARD 17
+        CXX_STANDARD 14
         CXX_STANDARD_REQUIRED ON
         COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
         )
