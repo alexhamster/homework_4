@@ -31,26 +31,25 @@ namespace myFunc {
 
 
     // Using to check, that tuple consists of the same types
-    // Compare all elements with the first one
-    template <typename T, typename U, size_t S, typename V>
+    // Compare all types with the first one
+    template <typename T, typename U, size_t i, typename V>
     struct is_one_of : std::false_type {};
 
     template <typename T, typename V>
-    struct is_one_of<T,T,1,V> : std::true_type {};
+    struct is_one_of<T, T, 1, V> : std::true_type {};
 
-    template <typename T, size_t S, typename V>
-    struct is_one_of<T,T,S,V> : is_one_of<typename std::tuple_element_t <0,V>,
-            typename std::tuple_element_t<S,V>, S-1, V> {};
+    template <typename T, size_t i, typename V>
+    struct is_one_of<T, T, i, V> : is_one_of<typename std::tuple_element_t <0, V>,
+            typename std::tuple_element_t<i, V>, i - 1, V> {};
 
-    template <typename T, typename U, size_t S, typename V>
-    constexpr bool is_one_of_v = is_one_of<T,U,S,V>::value;
+    template <typename T, typename U, size_t i, typename V>
+    constexpr bool is_one_of_v = is_one_of<T, U, i, V>::value;
 
 
     // Here i am trying to (write a bicycle) find out if the type is a std::string or not,
     // because std::to_string() can't work with std::string
-    //std::enable_if_t<std::is_compound_v<T>, std::string> all_to_sting (T t) todo find out why it does't work
     template <typename T>
-    std::enable_if_t<std::is_compound<T>::value, std::string> all_to_sting (T t)
+    std::enable_if_t<std::is_compound_v<T>, std::string> all_to_sting (T t)
     {
         return t;
     }
@@ -140,13 +139,13 @@ template<typename T>
 struct print<T, false, true, true> // valid tuple types
 {
     using first_element_type = typename std::tuple_element_t<0,T>;
-    using last_element_type = typename std::tuple_element_t<std::tuple_size<T>()-1,T>;
-    constexpr static size_t tuple_size = std::tuple_size<T>() - 1;
+    using n_element_type = typename std::tuple_element_t<std::tuple_size<T>()-1,T>;
+    constexpr static size_t n = std::tuple_size<T>() - 1;
 
     constexpr static bool is_valid_tuple = myFunc::is_one_of_v<
             first_element_type,
-            last_element_type,
-            tuple_size,
+            n_element_type,
+            n,
             T>;
 
     std::enable_if_t <is_valid_tuple, std::string> operator()(const T& t)

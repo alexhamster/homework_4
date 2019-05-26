@@ -14,21 +14,21 @@ BOOST_AUTO_TEST_CASE(print_test_0)
 BOOST_AUTO_TEST_CASE(print_test_1)
 {
     std::vector<char> v2 = {1, 3, 7, 8, 2};
-    auto s2 = do_print<std::vector<char>>(v2);
+    auto s2 = do_print(v2);
     BOOST_CHECK(s2.compare("1.3.7.8.2") == 0);
 }
 
 BOOST_AUTO_TEST_CASE(print_test_2)
 {
     std::list<int> v2 = {13,54,34,64,344};
-    auto s2 = do_print<std::list<int>>(v2);
+    auto s2 = do_print(v2);
     BOOST_CHECK(s2.compare("13.54.34.64.344") == 0);
 }
 
 BOOST_AUTO_TEST_CASE(print_test_3)
 {
     std::vector<std::string> v2 = {"Hello, World!"};
-    auto s2 = do_print<std::vector<std::string>>(v2);
+    auto s2 = do_print(v2);
     BOOST_CHECK(s2.compare("Hello, World!") == 0);
 }
 
