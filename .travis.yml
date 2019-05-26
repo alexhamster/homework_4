@@ -6,6 +6,10 @@ before_script:
   - sudo apt install libboost-test-dev -y
   - sudo apt install doxygen -y
   - sudo apt install graphviz -y
+addons:
+  apt:
+    packages:
+      - doxygen
   
 script:
   - doxygen Doxyfile
