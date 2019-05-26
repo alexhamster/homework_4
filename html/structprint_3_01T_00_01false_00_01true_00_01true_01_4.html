@@ -104,8 +104,8 @@ Collaboration diagram for print&lt; T, false, true, true &gt;:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:a2dae0d9d3db0a28ae73051bef2394aaa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a2dae0d9d3db0a28ae73051bef2394aaa">first_element_type</a> = typename std::tuple_element_t&lt; 0, T &gt;</td></tr>
 <tr class="separator:a2dae0d9d3db0a28ae73051bef2394aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7409ff0e8e3242c751eaec334842ae4a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a7409ff0e8e3242c751eaec334842ae4a">last_element_type</a> = typename std::tuple_element_t&lt; std::tuple_size&lt; T &gt;()-1, T &gt;</td></tr>
-<tr class="separator:a7409ff0e8e3242c751eaec334842ae4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6bfb81869a40026880ebd0d82cd25a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a6b6bfb81869a40026880ebd0d82cd25a">n_element_type</a> = typename std::tuple_element_t&lt; std::tuple_size&lt; T &gt;()-1, T &gt;</td></tr>
+<tr class="separator:a6b6bfb81869a40026880ebd0d82cd25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -114,8 +114,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a9e916cb79c7ac38e78590d3c30b633e7"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a9e916cb79c7ac38e78590d3c30b633e7">tuple_size</a> = std::tuple_size&lt;T&gt;() - 1</td></tr>
-<tr class="separator:a9e916cb79c7ac38e78590d3c30b633e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2206343ff3fdd5212f3984384d1d59dc"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a2206343ff3fdd5212f3984384d1d59dc">n</a> = std::tuple_size&lt;T&gt;() - 1</td></tr>
+<tr class="separator:a2206343ff3fdd5212f3984384d1d59dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac26cb1e1f2d4e622fc9bd7ba97555dc4"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#ac26cb1e1f2d4e622fc9bd7ba97555dc4">is_valid_tuple</a></td></tr>
 <tr class="separator:ac26cb1e1f2d4e622fc9bd7ba97555dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -134,14 +134,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a7409ff0e8e3242c751eaec334842ae4a"></a>
+<a class="anchor" id="a6b6bfb81869a40026880ebd0d82cd25a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structprint.html">print</a>&lt; T, false, true, true &gt;::<a class="el" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a7409ff0e8e3242c751eaec334842ae4a">last_element_type</a> =  typename std::tuple_element_t&lt;std::tuple_size&lt;T&gt;()-1,T&gt;</td>
+          <td class="memname">using <a class="el" href="structprint.html">print</a>&lt; T, false, true, true &gt;::<a class="el" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a6b6bfb81869a40026880ebd0d82cd25a">n_element_type</a> =  typename std::tuple_element_t&lt;std::tuple_size&lt;T&gt;()-1,T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -195,10 +195,10 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="namespacemyFunc.html#aa757a804546f113b7cadf75b0a1ec7e1">myFunc::is_one_of_v</a>&lt;</div><div class="line">            <a class="code" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a2dae0d9d3db0a28ae73051bef2394aaa">first_element_type</a>,</div><div class="line">            <a class="code" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a7409ff0e8e3242c751eaec334842ae4a">last_element_type</a>,</div><div class="line">            <a class="code" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a9e916cb79c7ac38e78590d3c30b633e7">tuple_size</a>,</div><div class="line">            T&gt;</div></div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="namespacemyFunc.html#aa757a804546f113b7cadf75b0a1ec7e1">myFunc::is_one_of_v</a>&lt;</div><div class="line">            <a class="code" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a2dae0d9d3db0a28ae73051bef2394aaa">first_element_type</a>,</div><div class="line">            <a class="code" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a6b6bfb81869a40026880ebd0d82cd25a">n_element_type</a>,</div><div class="line">            <a class="code" href="structprint_3_01T_00_01false_00_01true_00_01true_01_4.html#a2206343ff3fdd5212f3984384d1d59dc">n</a>,</div><div class="line">            T&gt;</div></div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a9e916cb79c7ac38e78590d3c30b633e7"></a>
+<a class="anchor" id="a2206343ff3fdd5212f3984384d1d59dc"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -208,7 +208,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr size_t <a class="el" href="structprint.html">print</a>&lt; T, false, true, true &gt;::tuple_size = std::tuple_size&lt;T&gt;() - 1</td>
+          <td class="memname">constexpr size_t <a class="el" href="structprint.html">print</a>&lt; T, false, true, true &gt;::n = std::tuple_size&lt;T&gt;() - 1</td>
         </tr>
       </table>
   </td>

@@ -15,7 +15,7 @@ Collaboration diagram for print$<$ T, false, true, true $>$\+:
 \item 
 using \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a2dae0d9d3db0a28ae73051bef2394aaa}{first\+\_\+element\+\_\+type} = typename std\+::tuple\+\_\+element\+\_\+t$<$ 0, T $>$
 \item 
-using \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a7409ff0e8e3242c751eaec334842ae4a}{last\+\_\+element\+\_\+type} = typename std\+::tuple\+\_\+element\+\_\+t$<$ std\+::tuple\+\_\+size$<$ T $>$()-\/1, T $>$
+using \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a6b6bfb81869a40026880ebd0d82cd25a}{n\+\_\+element\+\_\+type} = typename std\+::tuple\+\_\+element\+\_\+t$<$ std\+::tuple\+\_\+size$<$ T $>$()-\/1, T $>$
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -25,7 +25,7 @@ std\+::enable\+\_\+if\+\_\+t$<$ \hyperlink{structprint_3_01T_00_01false_00_01tru
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static constexpr size\+\_\+t \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a9e916cb79c7ac38e78590d3c30b633e7}{tuple\+\_\+size} = std\+::tuple\+\_\+size$<$T$>$() -\/ 1
+static constexpr size\+\_\+t \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a2206343ff3fdd5212f3984384d1d59dc}{n} = std\+::tuple\+\_\+size$<$T$>$() -\/ 1
 \item 
 static constexpr bool \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_ac26cb1e1f2d4e622fc9bd7ba97555dc4}{is\+\_\+valid\+\_\+tuple}
 \end{DoxyCompactItemize}
@@ -35,9 +35,9 @@ static constexpr bool \hyperlink{structprint_3_01T_00_01false_00_01true_00_01tru
 \index{print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}!first\+\_\+element\+\_\+type@{first\+\_\+element\+\_\+type}}
 \index{first\+\_\+element\+\_\+type@{first\+\_\+element\+\_\+type}!print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}}
 \subsubsection[{\texorpdfstring{first\+\_\+element\+\_\+type}{first_element_type}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf print}$<$ T, false, true, true $>$\+::{\bf first\+\_\+element\+\_\+type} =  typename std\+::tuple\+\_\+element\+\_\+t$<$0,T$>$}\hypertarget{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a2dae0d9d3db0a28ae73051bef2394aaa}{}\label{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a2dae0d9d3db0a28ae73051bef2394aaa}
-\index{print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}!last\+\_\+element\+\_\+type@{last\+\_\+element\+\_\+type}}
-\index{last\+\_\+element\+\_\+type@{last\+\_\+element\+\_\+type}!print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}}
-\subsubsection[{\texorpdfstring{last\+\_\+element\+\_\+type}{last_element_type}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf print}$<$ T, false, true, true $>$\+::{\bf last\+\_\+element\+\_\+type} =  typename std\+::tuple\+\_\+element\+\_\+t$<$std\+::tuple\+\_\+size$<$T$>$()-\/1,T$>$}\hypertarget{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a7409ff0e8e3242c751eaec334842ae4a}{}\label{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a7409ff0e8e3242c751eaec334842ae4a}
+\index{print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}!n\+\_\+element\+\_\+type@{n\+\_\+element\+\_\+type}}
+\index{n\+\_\+element\+\_\+type@{n\+\_\+element\+\_\+type}!print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}}
+\subsubsection[{\texorpdfstring{n\+\_\+element\+\_\+type}{n_element_type}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf print}$<$ T, false, true, true $>$\+::{\bf n\+\_\+element\+\_\+type} =  typename std\+::tuple\+\_\+element\+\_\+t$<$std\+::tuple\+\_\+size$<$T$>$()-\/1,T$>$}\hypertarget{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a6b6bfb81869a40026880ebd0d82cd25a}{}\label{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a6b6bfb81869a40026880ebd0d82cd25a}
 
 
 \subsection{Member Function Documentation}
@@ -58,13 +58,13 @@ static constexpr bool \hyperlink{structprint_3_01T_00_01false_00_01true_00_01tru
 \begin{DoxyCode}
 = \hyperlink{namespacemyFunc_aa757a804546f113b7cadf75b0a1ec7e1}{myFunc::is\_one\_of\_v}<
             \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a2dae0d9d3db0a28ae73051bef2394aaa}{first\_element\_type},
-            \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a7409ff0e8e3242c751eaec334842ae4a}{last\_element\_type},
-            \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a9e916cb79c7ac38e78590d3c30b633e7}{tuple\_size},
+            \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a6b6bfb81869a40026880ebd0d82cd25a}{n\_element\_type},
+            \hyperlink{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a2206343ff3fdd5212f3984384d1d59dc}{n},
             T>
 \end{DoxyCode}
-\index{print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}!tuple\+\_\+size@{tuple\+\_\+size}}
-\index{tuple\+\_\+size@{tuple\+\_\+size}!print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}}
-\subsubsection[{\texorpdfstring{tuple\+\_\+size}{tuple_size}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ constexpr size\+\_\+t {\bf print}$<$ T, false, true, true $>$\+::tuple\+\_\+size = std\+::tuple\+\_\+size$<$T$>$() -\/ 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a9e916cb79c7ac38e78590d3c30b633e7}{}\label{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a9e916cb79c7ac38e78590d3c30b633e7}
+\index{print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}!n@{n}}
+\index{n@{n}!print$<$ T, false, true, true $>$@{print$<$ T, false, true, true $>$}}
+\subsubsection[{\texorpdfstring{n}{n}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ constexpr size\+\_\+t {\bf print}$<$ T, false, true, true $>$\+::n = std\+::tuple\+\_\+size$<$T$>$() -\/ 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a2206343ff3fdd5212f3984384d1d59dc}{}\label{structprint_3_01T_00_01false_00_01true_00_01true_01_4_a2206343ff3fdd5212f3984384d1d59dc}
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}

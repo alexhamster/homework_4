@@ -7,7 +7,7 @@ struct \hyperlink{structmyFunc_1_1is__one__of}{is\+\_\+one\+\_\+of}
 \item 
 struct \hyperlink{structmyFunc_1_1is__one__of_3_01T_00_01T_00_011_00_01V_01_4}{is\+\_\+one\+\_\+of$<$ T, T, 1, V $>$}
 \item 
-struct \hyperlink{structmyFunc_1_1is__one__of_3_01T_00_01T_00_01S_00_01V_01_4}{is\+\_\+one\+\_\+of$<$ T, T, S, V $>$}
+struct \hyperlink{structmyFunc_1_1is__one__of_3_01T_00_01T_00_01i_00_01V_01_4}{is\+\_\+one\+\_\+of$<$ T, T, i, V $>$}
 \item 
 struct \hyperlink{structmyFunc_1_1IsTupleImpl}{Is\+Tuple\+Impl}
 \item 
@@ -22,7 +22,7 @@ struct \hyperlink{structmyFunc_1_1TuplePrinter_3_01Tuple_00_011_01_4}{Tuple\+Pri
 \item 
 {\footnotesize template$<$typename T $>$ }\\constexpr bool \hyperlink{namespacemyFunc_afe24a25839d94fd3368128576589722a}{is\+\_\+tuple\+\_\+v} ()
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+compound$<$ T $>$\+::value, std\+::string $>$ \hyperlink{namespacemyFunc_a3f0d86a5a675a3cdfae97fe12405c6a9}{all\+\_\+to\+\_\+sting} (T t)
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ \hyperlink{namespacestd_ae1e905cdb2694181466fae8f8dd8f8e8}{std\+::is\+\_\+compound\+\_\+v}$<$ T $>$, std\+::string $>$ \hyperlink{namespacemyFunc_a2880ec2f77273fe6723e3a9bf280f8f4}{all\+\_\+to\+\_\+sting} (T t)
 \item 
 {\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ \hyperlink{namespacestd_a824c5eb1a7e8aafa382dc9af3329a9e8}{std\+::is\+\_\+integral\+\_\+v}$<$ T $>$, std\+::string $>$ \hyperlink{namespacemyFunc_a501f8e9903912dcbd57e865a214c6568}{all\+\_\+to\+\_\+sting} (T t)
 \item 
@@ -31,18 +31,18 @@ struct \hyperlink{structmyFunc_1_1TuplePrinter_3_01Tuple_00_011_01_4}{Tuple\+Pri
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T , typename U , size\+\_\+t S, typename V $>$ }\\constexpr bool \hyperlink{namespacemyFunc_aa757a804546f113b7cadf75b0a1ec7e1}{is\+\_\+one\+\_\+of\+\_\+v} = \hyperlink{structmyFunc_1_1is__one__of}{is\+\_\+one\+\_\+of}$<$T,U,S,V$>$\+::value
+{\footnotesize template$<$typename T , typename U , size\+\_\+t i, typename V $>$ }\\constexpr bool \hyperlink{namespacemyFunc_aa757a804546f113b7cadf75b0a1ec7e1}{is\+\_\+one\+\_\+of\+\_\+v} = \hyperlink{structmyFunc_1_1is__one__of}{is\+\_\+one\+\_\+of}$<$T, U, i, V$>$\+::value
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
 \index{my\+Func@{my\+Func}!all\+\_\+to\+\_\+sting@{all\+\_\+to\+\_\+sting}}
 \index{all\+\_\+to\+\_\+sting@{all\+\_\+to\+\_\+sting}!my\+Func@{my\+Func}}
-\subsubsection[{\texorpdfstring{all\+\_\+to\+\_\+sting(\+T t)}{all_to_sting(T t)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+compound$<$T$>$\+::value, std\+::string$>$ my\+Func\+::all\+\_\+to\+\_\+sting (
+\subsubsection[{\texorpdfstring{all\+\_\+to\+\_\+sting(\+T t)}{all_to_sting(T t)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::enable\+\_\+if\+\_\+t$<${\bf std\+::is\+\_\+compound\+\_\+v}$<$T$>$, std\+::string$>$ my\+Func\+::all\+\_\+to\+\_\+sting (
 \begin{DoxyParamCaption}
 \item[{T}]{t}
 \end{DoxyParamCaption}
-)}\hypertarget{namespacemyFunc_a3f0d86a5a675a3cdfae97fe12405c6a9}{}\label{namespacemyFunc_a3f0d86a5a675a3cdfae97fe12405c6a9}
+)}\hypertarget{namespacemyFunc_a2880ec2f77273fe6723e3a9bf280f8f4}{}\label{namespacemyFunc_a2880ec2f77273fe6723e3a9bf280f8f4}
 \index{my\+Func@{my\+Func}!all\+\_\+to\+\_\+sting@{all\+\_\+to\+\_\+sting}}
 \index{all\+\_\+to\+\_\+sting@{all\+\_\+to\+\_\+sting}!my\+Func@{my\+Func}}
 \subsubsection[{\texorpdfstring{all\+\_\+to\+\_\+sting(\+T t)}{all_to_sting(T t)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::enable\+\_\+if\+\_\+t$<${\bf std\+::is\+\_\+integral\+\_\+v}$<$T$>$, std\+::string$>$ my\+Func\+::all\+\_\+to\+\_\+sting (
@@ -69,4 +69,4 @@ struct \hyperlink{structmyFunc_1_1TuplePrinter_3_01Tuple_00_011_01_4}{Tuple\+Pri
 \subsection{Variable Documentation}
 \index{my\+Func@{my\+Func}!is\+\_\+one\+\_\+of\+\_\+v@{is\+\_\+one\+\_\+of\+\_\+v}}
 \index{is\+\_\+one\+\_\+of\+\_\+v@{is\+\_\+one\+\_\+of\+\_\+v}!my\+Func@{my\+Func}}
-\subsubsection[{\texorpdfstring{is\+\_\+one\+\_\+of\+\_\+v}{is_one_of_v}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename U , size\+\_\+t S, typename V $>$ constexpr bool my\+Func\+::is\+\_\+one\+\_\+of\+\_\+v = {\bf is\+\_\+one\+\_\+of}$<$T,U,S,V$>$\+::value}\hypertarget{namespacemyFunc_aa757a804546f113b7cadf75b0a1ec7e1}{}\label{namespacemyFunc_aa757a804546f113b7cadf75b0a1ec7e1}
+\subsubsection[{\texorpdfstring{is\+\_\+one\+\_\+of\+\_\+v}{is_one_of_v}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename U , size\+\_\+t i, typename V $>$ constexpr bool my\+Func\+::is\+\_\+one\+\_\+of\+\_\+v = {\bf is\+\_\+one\+\_\+of}$<$T, U, i, V$>$\+::value}\hypertarget{namespacemyFunc_aa757a804546f113b7cadf75b0a1ec7e1}{}\label{namespacemyFunc_aa757a804546f113b7cadf75b0a1ec7e1}
