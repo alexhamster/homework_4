@@ -5,7 +5,7 @@ var indexSectionsWithContent =
   2: "ms",
   3: "cmpt",
   4: "abcdfimost",
-  5: "binw",
+  5: "bciw",
   6: "fn",
   7: "b"
 };

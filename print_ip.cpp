@@ -60,7 +60,7 @@ namespace myFunc {
         return std::to_string(t);
     }
 
-    // Printing tuple (https://stackoverflow.com/a/31116392/11405954)
+    // Printing a tuple (https://stackoverflow.com/a/31116392/11405954)
     template<class Tuple, std::size_t N>
     struct TuplePrinter {
         static void tuple_print(const Tuple& t)
@@ -97,7 +97,7 @@ union byteview
 };
 
 template<typename T>
-struct print<T, true, false, false> // integral types
+struct print<T, true, false, false> // for integral types
 {
     std::string operator()(const T& t)
     {
@@ -117,7 +117,7 @@ struct print<T, true, false, false> // integral types
 };
 
 template<typename T>
-struct print<T,false, true, false> // object types
+struct print<T,false, true, false> // for object types
 {
     std::string operator()(const T& t)
     {
@@ -136,16 +136,16 @@ struct print<T,false, true, false> // object types
 };
 
 template<typename T>
-struct print<T, false, true, true> // valid tuple types
+struct print<T, false, true, true> // for valid tuple types
 {
     using first_element_type = typename std::tuple_element_t<0,T>;
     using n_element_type = typename std::tuple_element_t<std::tuple_size<T>()-1,T>;
-    constexpr static size_t n = std::tuple_size<T>() - 1;
+    constexpr static size_t current_n = std::tuple_size<T>() - 1;
 
     constexpr static bool is_valid_tuple = myFunc::is_one_of_v<
             first_element_type,
             n_element_type,
-            n,
+            current_n,
             T>;
 
     std::enable_if_t <is_valid_tuple, std::string> operator()(const T& t)
