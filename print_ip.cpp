@@ -33,17 +33,17 @@ namespace myFunc {
     // Using to check, that tuple consists of the same types
     // Compare all types with the first one
     template <typename T, typename U, size_t i, typename V>
-    struct is_one_of : std::false_type {};
+    struct is_same_types : std::false_type {};
 
     template <typename T, typename V>
-    struct is_one_of<T, T, 1, V> : std::true_type {};
+    struct is_same_types<T, T, 1, V> : std::true_type {};
 
     template <typename T, size_t i, typename V>
-    struct is_one_of<T, T, i, V> : is_one_of<typename std::tuple_element_t <0, V>,
+    struct is_same_types<T, T, i, V> : is_same_types<typename std::tuple_element_t <0, V>,
             typename std::tuple_element_t<i, V>, i - 1, V> {};
 
     template <typename T, typename U, size_t i, typename V>
-    constexpr bool is_one_of_v = is_one_of<T, U, i, V>::value;
+    constexpr bool is_same_types_v = is_same_types<T, U, i, V>::value;
 
 
     // Here i am trying to (write a bicycle) find out if the type is a std::string or not,
@@ -142,7 +142,7 @@ struct print<T, false, true, true> // for valid tuple types
     using n_element_type = typename std::tuple_element_t<std::tuple_size<T>()-1,T>;
     constexpr static size_t current_n = std::tuple_size<T>() - 1;
 
-    constexpr static bool is_valid_tuple = myFunc::is_one_of_v<
+    constexpr static bool is_valid_tuple = myFunc::is_same_types_v<
             first_element_type,
             n_element_type,
             current_n,
