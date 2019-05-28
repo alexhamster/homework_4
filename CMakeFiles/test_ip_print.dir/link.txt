@@ -1,1 +1,0 @@
-/usr/local/clang-7.0.0/bin/clang++    -rdynamic CMakeFiles/test_ip_print.dir/test_ip_print.cpp.o  -o test_ip_print -lboost_unit_test_framework libip_lib.a 
